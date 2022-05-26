@@ -36,7 +36,7 @@ def MonteCarlo(num_Trials):
         
         # needles in circle / needles in square = area of circle / area of square
         # area of circle = (area of square * needles in circle) / needles in square
-        # sub in 2*2 = 4 for area of circle
+        # sub in 2*2 = 4 for area of square
         # area of circle = (4 * needles in circle) / needles in square
         
     pi_estimate = 4 * (points_in_circle / num_Trials)
