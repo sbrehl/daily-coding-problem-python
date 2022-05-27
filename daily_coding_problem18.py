@@ -68,9 +68,8 @@ def deque_implementation(array, k):
     for index in range(k):
         # this loop builds up the queue with the first sliding window of elements
         
-        # if the element to be added is smaller than the one, that is already
-        # stored in the queue, it does not need to be considered, and can be
-        # removed
+        # if the element to be added is bigger than the one that is already
+        # stored in the queue, the stored ones can be removed
         while queue and array[index] >= array[queue[-1]]:
             queue.pop()
             
