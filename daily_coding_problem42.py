@@ -62,7 +62,13 @@ def create_power_set3(original_set):
     return power_set
 
 def subset_summation(list_of_integers, target_number):
-    power_set = create_power_set3(list_of_integers)
+    new_list = [i for i in list_of_integers if i <= target_number]
+    
+    # create new set, that excludes those numbers which are greater than
+    # the target number, since there are no negative numbers, and therefor
+    # these numbers cannot be used to create a subset that satisfies the
+    # condition
+    power_set = create_power_set3(new_list)
     
     for subset in power_set:
         if sum(subset) == target_number:
